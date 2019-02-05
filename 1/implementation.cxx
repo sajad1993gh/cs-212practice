@@ -27,17 +27,16 @@ void throttle::shift(int amount)
   else if (position > top_position) position = top_position;
   }
 
-  double throttle::flow( ) const
+//  double throttle::flow( ) const
   // Precondition: shut_off has been called at least once to initialize the throttle.
   // Postcondition: The value returned is the current flow as a proportion of // the maximum flow.
   {
-  return position / top_position;
-}
+//  return position / double(top_position);
+//}
 
-bool throttle::is_on( ) const
-// Precondition: shut_off has been called at least once to initialize the throttle.
+//// Precondition: shut_off has been called at least once to initialize the throttle.
 // Postcondition: If the throttle’s flow is above 0, then the function
 // returns true; otherwise, it returns false.
-{
-return (position > 0);
- }
+//{
+//return (position > 0);
+// }

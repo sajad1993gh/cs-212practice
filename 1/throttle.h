@@ -12,9 +12,9 @@ public:
 void shut_off( ) { position = 0; }
 void shift(int amount);
 // CONSTANT MEMBER FUNCTIONS
-double flow( ) const;
-bool is_on( ) const;
+double flow( ) const {return position / double(top_position);}
+bool is_on( ) const {return (position > 0);}
 private:
 int position;
-double top_position;
+int top_position;
  };
