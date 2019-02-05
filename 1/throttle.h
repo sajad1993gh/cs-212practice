@@ -20,7 +20,8 @@ Postcondition: If the throttle’s flow is above 0 then the function returns tru
 */
 #ifndef SAJAD_P1_DATASTRUCTURE
 #define SAJAD_P1_DATASTRUCTURE
-
+namespace sajad_p1
+ {
 class throttle {
 public:
   //Constructor
@@ -40,3 +41,5 @@ private:
 int position;
 int top_position;
  };
+}
+ #endif
