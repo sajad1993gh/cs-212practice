@@ -1,7 +1,8 @@
 
 class throttle {
 public:
-// MODIFICATION MEMBER FUNCTIONS void shut_off( );
+// MODIFICATION MEMBER FUNCTIONS
+void shut_off( );
 void shift(int amount);
 // CONSTANT MEMBER FUNCTIONS
 double flow( ) const;
