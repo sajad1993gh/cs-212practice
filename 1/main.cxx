@@ -3,7 +3,7 @@
 using namespace std;
 
 #include "throttle.h"
-
+using namespace sajad_p1;
 int main( ) {
 throttle sample;
 int user_input;
