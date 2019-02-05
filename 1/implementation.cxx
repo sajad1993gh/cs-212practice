@@ -1,7 +1,8 @@
 #include "throttle.h"
-using namespace sajad_p1;
+//using namespace sajad_p1;
 #include <cassert>
 //Constructor
+namespace sajad_p1{
 throttle::throttle( )
 {
 top_position = 1;
@@ -28,6 +29,7 @@ void throttle::shift(int amount)
   if (position < 0) position = 0;
   else if (position > top_position) position = top_position;
   }
+}
 
 //  double throttle::flow( ) const
   // Precondition: shut_off has been called at least once to initialize the throttle.
