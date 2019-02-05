@@ -20,3 +20,11 @@ void throttle::shift(int amount)
   {
   return position / 6.0;
 }
+
+bool throttle::is_on( ) const
+// Precondition: shut_off has been called at least once to initialize the throttle.
+// Postcondition: If the throttle’s flow is above 0, then the function
+// returns true; otherwise, it returns false.
+{
+return (flow( ) > 0);
+ }
