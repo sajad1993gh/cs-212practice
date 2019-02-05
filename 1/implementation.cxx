@@ -12,12 +12,11 @@ throttle::throttle(int size)
   position = 0;
 }
 
-void throttle::shut_off( )
-// Precondition: None.
+//// Precondition: None.
 // Postcondition: The throttle has been turned off.
- {
-      position = 0;
-  }
+// {
+//      position = 0;
+//  }
 
 void throttle::shift(int amount)
   // Precondition: shut_off has been called at least once to initialize the throttle.

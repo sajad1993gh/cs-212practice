@@ -9,7 +9,7 @@ public:
 // and its current position is off.
 
 // MODIFICATION MEMBER FUNCTIONS
-void shut_off( );
+void shut_off( ) { position = 0; }
 void shift(int amount);
 // CONSTANT MEMBER FUNCTIONS
 double flow( ) const;
