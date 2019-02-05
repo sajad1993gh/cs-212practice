@@ -2,6 +2,7 @@
 #include <cstdlib>
 using namespace std;
 
+#include "throttle.h"
 
 int main( ) {
 throttle sample;

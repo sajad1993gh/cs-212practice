@@ -1,4 +1,5 @@
-
+#include "throttle.h"
+#include <cassert>
 //Constructor
 throttle::throttle( )
 {
@@ -7,7 +8,7 @@ position = 0;
 }
 throttle::throttle(int size)
 {
-  assert(size>0)
+  assert(size>0);
   top_position = size;
   position = 0;
 }
@@ -30,7 +31,7 @@ void throttle::shift(int amount)
 //  double throttle::flow( ) const
   // Precondition: shut_off has been called at least once to initialize the throttle.
   // Postcondition: The value returned is the current flow as a proportion of // the maximum flow.
-  {
+//  {
 //  return position / double(top_position);
 //}
 
