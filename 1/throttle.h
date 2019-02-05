@@ -17,6 +17,9 @@ double flow( ) const
 Postcondition: The value returned is the current flow as a proportion of the maximum flow.
 bool is_on( ) const
 Postcondition: If the throttle’s flow is above 0 then the function returns true; otherwise it returns false.
+// VALUE SEMANTICS for the throttle class:
+// Assignments and the copy constructor may be used with throttle
+// objects.
 */
 #ifndef SAJAD_P1_DATASTRUCTURE
 #define SAJAD_P1_DATASTRUCTURE
