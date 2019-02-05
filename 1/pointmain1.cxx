@@ -13,19 +13,25 @@ int main( )
 	cout << "Value semantics of the point class" <<endl;
 
 	point p1(-1.0,  0.8), p2;
-	
-	cout << "Point p1 is intialized as (" << p1.get_x() << ", " << p1.get_y() << ")"<< "by the constructor with 2 parameters" << endl; 
-	cout << "Point p2 is intialized as (" << p2.get_x() << ", " << p2.get_y()  << ")" << endl; 
+
+	cout << "Point p1 is intialized as (" << p1.get_x() << ", " << p1.get_y() << ")"<< "by the constructor with 2 parameters" << endl;
+	cout << "Point p2 is intialized as (" << p2.get_x() << ", " << p2.get_y()  << ")" << endl;
 
 	p2 =  p1;
-	cout << "After assigning p1 to p2, Point p2 is (" << p2.get_x() << ", " << p2.get_y()  << ")" << "by the default constructor" << endl; 
+	cout << "After assigning p1 to p2, Point p2 is (" << p2.get_x() << ", " << p2.get_y()  << ")" << "by the default constructor" << endl;
 
 	point p3 (p1);
-	cout << "Point p3 is intialized as (" << p2.get_x() << ", " << p2.get_y()  << ")" << "by copying p1" << endl; 
+	cout << "Point p3 is intialized as (" << p3.get_x() << ", " << p3.get_y()  << ")" << "by copying p1" << endl;
 
 	point p4 = p1;
-	cout << "Point p4 is intialized as (" << p2.get_x() << ", " << p2.get_y()  << ")" << "by an alternative copying of p1" << endl; 
+	cout << "Point p4 is intialized as (" << p4.get_x() << ", " << p4.get_y()  << ")" << "by an alternative copying of p1" << endl;
 
-    
+	p4.shift(1,2);
+	cout << "Point p4 is shifted as (" << p4.get_x() << ", " << p4.get_y()  << ")" << endl;
+
+	p4.rotate90();
+	cout << "Point p4 is rotated as (" << p4.get_x() << ", " << p4.get_y()  << ")" << endl;
+
+
 	return EXIT_SUCCESS;
 }
