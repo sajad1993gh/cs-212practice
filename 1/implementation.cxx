@@ -1,4 +1,5 @@
 #include "throttle.h"
+using namespace sajad_p1;
 #include <cassert>
 //Constructor
 throttle::throttle( )
