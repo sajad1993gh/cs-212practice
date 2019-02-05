@@ -1,3 +1,17 @@
+
+//Constructor
+throttle::throttle( )
+{
+top_position = 1;
+position = 0;
+}
+throttle::throttle(int size)
+{
+  assert(size>0)
+  top_position = size;
+  position = 0;
+}
+
 void throttle::shut_off( )
 // Precondition: None.
 // Postcondition: The throttle has been turned off.
@@ -11,14 +25,14 @@ void throttle::shift(int amount)
   {
         position += amount;
   if (position < 0) position = 0;
-  else if (position > 6) position = 6;
+  else if (position > top_position) position = top_position;
   }
 
   double throttle::flow( ) const
   // Precondition: shut_off has been called at least once to initialize the throttle.
   // Postcondition: The value returned is the current flow as a proportion of // the maximum flow.
   {
-  return position / 6.0;
+  return position / top_position;
 }
 
 bool throttle::is_on( ) const
@@ -26,5 +40,5 @@ bool throttle::is_on( ) const
 // Postcondition: If the throttle’s flow is above 0, then the function
 // returns true; otherwise, it returns false.
 {
-return (flow( ) > 0);
+return (position > 0);
  }
