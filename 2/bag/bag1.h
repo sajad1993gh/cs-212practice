@@ -59,14 +59,14 @@
 namespace main_savitch_3
 {
     class bag
-    { 
+    {
     public:
         // TYPEDEFS and MEMBER CONSTANTS
         typedef int value_type;
         typedef size_t size_type; // typedef std::size_t size_type;// in VC++ 6.0 size_t is not a member of std
         enum {CAPACITY = 30}; //static const size_type CAPACITY = 30;
         // CONSTRUCTOR
-        bag( ) { used = 0; } 
+        bag( ) { used = 0; }
         // MODIFICATION MEMBER FUNCTIONS
         size_type erase(const value_type& target);
         bool erase_one(const value_type& target);
@@ -75,6 +75,8 @@ namespace main_savitch_3
         // CONSTANT MEMBER FUNCTIONS
         size_type size( ) const { return used; }
         size_type count(const value_type& target) const;
+        //friend
+        friend bag operator -(const bag& b1, const bag& b2);
     private:
         value_type data[CAPACITY];  // The array to store items
         size_type used;             // How much of array is used
