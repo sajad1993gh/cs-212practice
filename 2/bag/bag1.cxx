@@ -14,7 +14,7 @@ using namespace std;
 namespace main_savitch_3
 {
     //const bag::size_type bag::CAPACITY; //already changed to enum {CAPACITY = 30}
-    
+
     bag::size_type bag::erase(const value_type& target)
     {
 	size_type index = 0;
@@ -37,28 +37,28 @@ namespace main_savitch_3
 
     bool bag::erase_one(const value_type& target)
     {
-	size_type index; // The location of target in the data array    
+	size_type index; // The location of target in the data array
 
 	// First, set index to the location of target in the data array,
 	// which could be as small as 0 or as large as used-1. If target is not
 	// in the array, then index will be set equal to used.
-	index = 0; 
+	index = 0;
 	while ((index < used) && (data[index] != target))
 	    ++index;
 
 	if (index == used)
-	    return false; // target isn’t in the bag, so no work to do.
+	    return false; // target isnï¿½t in the bag, so no work to do.
 
 	// When execution reaches here, target is in the bag at data[index].
 	// So, reduce used by 1 and copy the last item onto data[index].
 	--used;
-	data[index] = data[used];    
+	data[index] = data[used];
 	return true;
     }
 
 	void bag::insert(const value_type& entry)
     // Library facilities used: cassert
-    {   
+    {
         assert(size( ) < CAPACITY);
 		data[used] = entry;
 	++used;
@@ -68,7 +68,7 @@ namespace main_savitch_3
     // Library facilities used: algorithm, cassert
     {
 	assert(size( ) + addend.size( ) <= CAPACITY);
-	
+
 	copy(addend.data, addend.data + addend.used, data + used);
 	used += addend.used;
     }
@@ -92,8 +92,24 @@ namespace main_savitch_3
 
         assert(b1.size( ) + b2.size( ) <= bag::CAPACITY);
 
-        answer += b1; 
+        answer += b1;
         answer += b2;
         return answer;
     }
+    // NONMEMBER friend FUNCTION for the bag class:
+    bag operator-(const bag& b1, const bag& b2)
+    //     Postcondition: For two bags b1 and b2, the bag x-y contains all the items of x, with any items from y removed
+    {
+      size_t index;
+      bag answer(b1);  // copy constructor
+      size_t size2 = b2.size(); // use member function size
+      for (index = 0; index < size2; ++index)
+      {
+        int target = b2.data[index];  // use private member variable
+        if (answer.count(target) ) // use function count
+        answer.erase_one(target); // use function erase_one
+  }
+  return answer;
+  }
+
 }
