@@ -34,14 +34,14 @@
 //   void insert(const value_type& entry)
 //     Precondition: size( ) < CAPACITY.
 //     Postcondition: A new copy of entry has been inserted in the sequence
-//     before the current item. If there was no current item, then the new entry 
+//     before the current item. If there was no current item, then the new entry
 //     has been inserted at the front of the sequence. In either case, the newly
 //     inserted item is now the current item of the sequence.
 //
 //   void attach(const value_type& entry)
 //     Precondition: size( ) < CAPACITY.
 //     Postcondition: A new copy of entry has been inserted in the sequence after
-//     the current item. If there was no current item, then the new entry has 
+//     the current item. If there was no current item, then the new entry has
 //     been attached to the end of the sequence. In either case, the newly
 //     inserted item is now the current item of the sequence.
 //
@@ -72,7 +72,7 @@
 #include <cstdlib>  // Provides size_t
 
 namespace main_savitch_3
-{
+{ 
 
     class sequence
     {
@@ -100,4 +100,3 @@ namespace main_savitch_3
 }
 
 #endif
-
