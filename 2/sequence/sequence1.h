@@ -72,8 +72,8 @@
 #include <cstdlib>  // Provides size_t
 
 namespace main_savitch_3
-{ 
-
+{
+ 
     class sequence
     {
     public:
