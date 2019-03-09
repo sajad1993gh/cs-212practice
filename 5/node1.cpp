@@ -90,7 +90,7 @@ namespace main_savitch_5
 	node *remove_ptr;
 
 	remove_ptr = head_ptr;
-	head_ptr = head_ptr->link( );
+	head_ptr = head_ptr->link( ); // or head_ptr = remove_ptr -> link();
 	delete remove_ptr;
     }
 
