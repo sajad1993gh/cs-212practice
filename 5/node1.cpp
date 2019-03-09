@@ -87,11 +87,11 @@ namespace main_savitch_5
 
     void list_head_remove(node*& head_ptr)
     {
-	node *remove_ptr;
+	     node *remove_ptr;
 
-	remove_ptr = head_ptr;
-	head_ptr = head_ptr->link( ); // or head_ptr = remove_ptr -> link();
-	delete remove_ptr;
+	     remove_ptr = head_ptr;
+	     head_ptr = head_ptr->link( ); // or head_ptr = remove_ptr -> link();
+	     delete remove_ptr;
     }
 
     void list_remove(node* previous_ptr)
