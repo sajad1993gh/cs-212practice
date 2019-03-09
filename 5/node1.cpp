@@ -26,15 +26,15 @@ namespace main_savitch_5
 
     void list_head_insert(node*& head_ptr, const node::value_type& entry)
     {
-	head_ptr = new node(entry, head_ptr);
+	     head_ptr = new node(entry, head_ptr);
     }
 
     void list_insert(node* previous_ptr, const node::value_type& entry)
     {
-	node *insert_ptr;
+	     node *insert_ptr;
 
-	insert_ptr = new node(entry, previous_ptr->link( ));
-	previous_ptr->set_link(insert_ptr);
+	      insert_ptr = new node(entry, previous_ptr->link( ));
+	      previous_ptr->set_link(insert_ptr);
     }
 
     node* list_search(node* head_ptr, const node::value_type& target)
