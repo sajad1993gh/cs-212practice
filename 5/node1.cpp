@@ -96,11 +96,11 @@ namespace main_savitch_5
 
     void list_remove(node* previous_ptr)
     {
-	node *remove_ptr;
+	     node *remove_ptr;
 
-	remove_ptr = previous_ptr->link( );
-	previous_ptr->set_link( remove_ptr->link( ) );
-	delete remove_ptr;
+	      remove_ptr = previous_ptr->link( );
+	      previous_ptr->set_link( remove_ptr->link( ) );
+	      delete remove_ptr;
     }
 
     void list_clear(node*& head_ptr)
