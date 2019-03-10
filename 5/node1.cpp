@@ -62,27 +62,27 @@ namespace main_savitch_5
     node* list_locate(node* head_ptr, size_t position)
     // Library facilities used: cassert, cstdlib
     {
-	node *cursor;
-	size_t i;
+	     node *cursor;
+	      size_t i;
 
-	assert (0 < position);
-	cursor = head_ptr;
-	for (i = 1; (i < position) && (cursor != NULL); i++)
-	    cursor = cursor->link( );
-	return cursor;
+	       assert (0 < position);
+	       cursor = head_ptr;
+	       for (i = 1; (i < position) && (cursor != NULL); i++)
+	       cursor = cursor->link( );
+	       return cursor;
     }
 
     const node* list_locate(const node* head_ptr, size_t position)
     // Library facilities used: cassert, cstdlib
     {
-	const node *cursor;
-	size_t i;
+	     const node *cursor;
+	     size_t i;
 
-	assert (0 < position);
-	cursor = head_ptr;
-	for (i = 1; (i < position) && (cursor != NULL); i++)
-	    cursor = cursor->link( );
-	return cursor;
+	     assert (0 < position);
+	     cursor = head_ptr;
+	     for (i = 1; (i < position) && (cursor != NULL); i++)
+	     cursor = cursor->link( );
+	     return cursor;
     }
 
     void list_head_remove(node*& head_ptr)
