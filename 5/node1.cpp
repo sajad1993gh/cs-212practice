@@ -106,7 +106,7 @@ namespace main_savitch_5
     void list_clear(node*& head_ptr)
     // Library facilities used: cstdlib
     {
-	while (head_ptr != NULL)
+	    while (head_ptr != NULL)
 	    list_head_remove(head_ptr);
     }
 
