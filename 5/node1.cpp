@@ -40,23 +40,23 @@ namespace main_savitch_5
     node* list_search(node* head_ptr, const node::value_type& target)
     // Library facilities used: cstdlib
     {
-	node *cursor;
+	     node *cursor;
 
-	for (cursor = head_ptr; cursor != NULL; cursor = cursor->link( ))
-	    if (target == cursor->data( ))
-		return cursor;
-	return NULL;
+	      for (cursor = head_ptr; cursor != NULL; cursor = cursor->link( ))
+	      if (target == cursor->data( ))
+		    return cursor;
+	      return NULL;
     }
 
     const node* list_search(const node* head_ptr, const node::value_type& target)
     // Library facilities used: cstdlib
     {
-	const node *cursor;
+	     const node *cursor;
 
-	for (cursor = head_ptr; cursor != NULL; cursor = cursor->link( ))
-	    if (target == cursor->data( ))
-		return cursor;
-	return NULL;
+	      for (cursor = head_ptr; cursor != NULL; cursor = cursor->link( ))
+	      if (target == cursor->data( ))
+		    return cursor;
+	      return NULL;
     }
 
     node* list_locate(node* head_ptr, size_t position)
