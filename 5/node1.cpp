@@ -2,7 +2,7 @@
 // IMPLEMENTS: The functions of the node class and the
 // linked list toolkit (see node1.h for documentation).
 // INVARIANT for the node class:
-//   The data of a node is stored in data_field, and the link in link_field.
+// The data of a node is stored in data_field, and the link in link_field.
 
 #include "node1.h"
 #include <cassert>    // Provides assert
