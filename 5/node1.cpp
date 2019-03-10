@@ -113,25 +113,25 @@ namespace main_savitch_5
     void list_copy(const node* source_ptr, node*& head_ptr, node*& tail_ptr)
     // Library facilities used: cstdlib
     {
-	head_ptr = NULL;
-	tail_ptr = NULL;
+	     head_ptr = NULL;
+	     tail_ptr = NULL;
 
 	// Handle the case of the empty list.
-	if (source_ptr == NULL)
+	    if (source_ptr == NULL)
 	    return;
 
 	// Make the head node for the newly created list, and put data in it.
-	list_head_insert(head_ptr, source_ptr->data( ));
-	tail_ptr = head_ptr;
+	   list_head_insert(head_ptr, source_ptr->data( ));
+	   tail_ptr = head_ptr;
 
 	// Copy the rest of the nodes one at a time, adding at the tail of new list.
-	source_ptr = source_ptr->link( );
-	while (source_ptr != NULL)
-	{
+	   source_ptr = source_ptr->link( );
+	   while (source_ptr != NULL)
+	    {
 	    list_insert(tail_ptr, source_ptr->data( ));
 	    tail_ptr = tail_ptr->link( );
-	    source_ptr = source_ptr->link( );
-	}
+      source_ptr = source_ptr->link( );
+	   }
     }
 
 }
