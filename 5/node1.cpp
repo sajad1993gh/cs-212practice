@@ -35,6 +35,8 @@ namespace main_savitch_5
 
 	      insert_ptr = new node(entry, previous_ptr->link( ));
 	      previous_ptr->set_link(insert_ptr);
+        //or
+        //previous_ptr->set_link(new node(entry, previous_ptr->link()));
     }
 
     node* list_search(node* head_ptr, const node::value_type& target)
