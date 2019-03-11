@@ -18,8 +18,8 @@ namespace main_savitch_5
     bag::bag( )
     // Library facilities used: cstdlib
     {
-	head_ptr = NULL;
-	many_nodes = 0;
+	     head_ptr = NULL;
+	     many_nodes = 0;
     }
 
     bag::bag(const bag& source)
@@ -30,7 +30,7 @@ namespace main_savitch_5
         list_copy(source.head_ptr, head_ptr, tail_ptr);
         many_nodes = source.many_nodes;
     }
-    
+
     bag::~bag( )
     // Library facilities used: node1.h
     {
@@ -43,7 +43,7 @@ namespace main_savitch_5
     {
 	size_type answer;
 	const node *cursor; // Use const node* since we don't change the nodes.
-	
+
 	answer = 0;
 	cursor = list_search(head_ptr, target);
 	while (cursor != NULL)
@@ -79,12 +79,12 @@ namespace main_savitch_5
         }
         return answer;
     }
-    
+
     bool bag::erase_one(const value_type& target)
     // Library facilities used: cstdlib, node1.h
     {
 	node *target_ptr;
-	
+
 	target_ptr = list_search(head_ptr, target);
 	if (target_ptr == NULL)
 	    return false; // target isn't in the bag, so no work to do
@@ -118,16 +118,16 @@ namespace main_savitch_5
     {
 	node *copy_head_ptr;
 	node *copy_tail_ptr;
-	
+
 	if (addend.many_nodes > 0)
 	{
 	    list_copy(addend.head_ptr, copy_head_ptr, copy_tail_ptr);
-	    copy_tail_ptr->set_link( head_ptr ); 
+	    copy_tail_ptr->set_link( head_ptr );
 	    head_ptr = copy_head_ptr;
 	    many_nodes += addend.many_nodes;
 	}
     }
-    
+
     void bag::operator =(const bag& source)
     // Library facilities used: node1.h
     {
@@ -146,7 +146,7 @@ namespace main_savitch_5
     {
 	bag answer;
 
-	answer += b1; 
+	answer += b1;
 	answer += b2;
 	return answer;
     }
