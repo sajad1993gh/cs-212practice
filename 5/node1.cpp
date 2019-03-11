@@ -1,4 +1,4 @@
-// FILE: node1.cxx 
+// FILE: node1.cxx
 // IMPLEMENTS: The functions of the node class and the
 // linked list toolkit (see node1.h for documentation).
 // INVARIANT for the node class:
@@ -31,7 +31,7 @@ namespace main_savitch_5
 
     void list_insert(node* previous_ptr, const node::value_type& entry)
     {
-	     node *insert_ptr;
+	      node *insert_ptr;
 
 	      insert_ptr = new node(entry, previous_ptr->link( ));
 	      previous_ptr->set_link(insert_ptr);
