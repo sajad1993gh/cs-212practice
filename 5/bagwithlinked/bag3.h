@@ -1,9 +1,9 @@
-// FILE: bag3.h 
+// FILE: bag3.h
 // CLASS PROVIDED: bag (part of the namespace main_savitch_5)
 //
 // TYPEDEFS for the bag class:
 //   bag::value_type
-//     is the data type of the items in the bag. It may be any 
+//     is the data type of the items in the bag. It may be any
 //     of the C++ built-in types (int, char, etc.), or a class with a default
 //     constructor, a copy constructor, an assignment
 //     operator, and a test for equality (x == y).
@@ -27,31 +27,31 @@
 //     return value indicates that one copy was removed; false indicates that
 //     nothing was removed.
 //
-//   void insert(const value_type& entry) 
+//   void insert(const value_type& entry)
 //     Postcondition: A new copy of entry has been inserted into the bag.
 //
-//   void operator +=(const bag& addend) 
+//   void operator +=(const bag& addend)
 //     Postcondition: Each item in addend has been added to this bag.
 //
 // CONSTANT MEMBER FUNCTIONS for the bag class:
-//   size_type size( ) const 
+//   size_type size( ) const
 //     Postcondition: Return value is the total number of items in the bag.
 //
-//   size_type count(const value_type& target) const 
+//   size_type count(const value_type& target) const
 //     Postcondition: Return value is number of times target is in the bag.
 //
-//   value_type grab( ) const 
+//   value_type grab( ) const
 //     Precondition: size( ) > 0.
 //     Postcondition: The return value is a randomly selected item from the bag.
-// 
+//
 // NONMEMBER FUNCTIONS for the bag class:
-//   bag operator +(const bag& b1, const bag& b2) 
+//   bag operator +(const bag& b1, const bag& b2)
 //     Postcondition: The bag returned is the union of b1 and b2.
 //
 // VALUE SEMANTICS for the bag class:
 //    Assignments and the copy constructor may be used with bag objects.
 //
-// DYNAMIC MEMORY USAGE by the bag: 
+// DYNAMIC MEMORY USAGE by the bag:
 //   If there is insufficient dynamic memory, then the following functions throw
 //   bad_alloc: The constructors, insert, operator +=, operator +, and the
 //   assignment operator.
@@ -71,7 +71,7 @@ namespace main_savitch_5
         // CONSTRUCTORS and DESTRUCTOR
         bag( );
         bag(const bag& source);
-	~bag( );
+	      ~bag( );
         // MODIFICATION MEMBER FUNCTIONS
         size_type erase(const value_type& target);
         bool erase_one(const value_type& target);
@@ -83,12 +83,11 @@ namespace main_savitch_5
         size_type count(const value_type& target) const;
         value_type grab( ) const;
     private:
-        node *head_ptr;       // List head pointer 
+        node *head_ptr;       // List head pointer
         size_type many_nodes; // Number of nodes on the list
     };
 
-    // NONMEMBER FUNCTIONS for the bag class:    
+    // NONMEMBER FUNCTIONS for the bag class:
     bag operator +(const bag& b1, const bag& b2);
 }
 #endif
-
