@@ -67,14 +67,14 @@ namespace main_savitch_5
         target_ptr = list_search(head_ptr, target);
         while (target_ptr != NULL)
         {
-            // Each time that target_ptr is not NULL, we have another occurrence
+      // Each time that target_ptr is not NULL, we have another occurrence
 	    // of target. We remove this target using the same technique that
 	    // was used in erase_one.
             target_ptr->set_data( head_ptr->data( ) );
             target_ptr = target_ptr->link( );
             target_ptr = list_search(target_ptr, target);
             list_head_remove(head_ptr);
-	    --many_nodes;
+	          --many_nodes;
             ++answer;
         }
         return answer;
@@ -109,24 +109,24 @@ namespace main_savitch_5
     void bag::insert(const value_type& entry)
     // Library facilities used: node1.h
     {
-	list_head_insert(head_ptr, entry);
-	++many_nodes;
+      list_head_insert(head_ptr, entry);
+      ++many_nodes;
     }
 
     void bag::operator +=(const bag& addend)
     // Library facilities used: cstdlib, node1.h
     {
-	node *copy_head_ptr;
-	node *copy_tail_ptr;
+      node *copy_head_ptr;
+      node *copy_tail_ptr;
 
-	if (addend.many_nodes > 0)
-	{
-	    list_copy(addend.head_ptr, copy_head_ptr, copy_tail_ptr);
-	    copy_tail_ptr->set_link( head_ptr );
-	    head_ptr = copy_head_ptr;
-	    many_nodes += addend.many_nodes;
-	}
-    }
+      if (addend.many_nodes > 0)
+      {
+	       list_copy(addend.head_ptr, copy_head_ptr, copy_tail_ptr);
+	       copy_tail_ptr->set_link( head_ptr );
+	       head_ptr = copy_head_ptr;
+	       many_nodes += addend.many_nodes;
+       }
+     }
 
     void bag::operator =(const bag& source)
     // Library facilities used: node1.h
