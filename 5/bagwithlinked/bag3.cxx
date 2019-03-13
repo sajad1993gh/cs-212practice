@@ -97,13 +97,13 @@ namespace main_savitch_5
     bag::value_type bag::grab( ) const
     // Library facilities used: cassert, cstdlib, node1.h
     {
-	size_type i;
-	const node *cursor; // Use const node* since we don't change the nodes.
+      size_type i;
+      const node *cursor; // Use const node* since we don't change the nodes.
 
-	assert(size( ) > 0);
-	i = (rand( ) % size( )) + 1;
-	cursor = list_locate(head_ptr, i);
-	return cursor->data( );
+      assert(size( ) > 0);
+      i = (rand( ) % size( )) + 1;
+      cursor = list_locate(head_ptr, i);
+      return cursor->data( );
     }
 
     void bag::insert(const value_type& entry)
