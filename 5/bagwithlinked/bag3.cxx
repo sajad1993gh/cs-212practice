@@ -41,22 +41,22 @@ namespace main_savitch_5
     bag::size_type bag::count(const value_type& target) const
     // Library facilities used: cstdlib, node1.h
     {
-	size_type answer;
-	const node *cursor; // Use const node* since we don't change the nodes.
+	     size_type answer;
+	     const node *cursor; // Use const node* since we don't change the nodes.
 
-	answer = 0;
-	cursor = list_search(head_ptr, target);
-	while (cursor != NULL)
-	{
+	     answer = 0;
+	     cursor = list_search(head_ptr, target);
+	     while (cursor != NULL)
+	     {
 	    // Each time that cursor is not NULL, we have another occurrence of
 	    // target, so we add one to answer, and move cursor to the next
 	    // occurrence of the target.
-	    ++answer;
-	    cursor = cursor->link( );
-	    cursor = list_search(cursor, target);
-	}
-	return answer;
-    }
+	       ++answer;
+	       cursor = cursor->link( );
+	       cursor = list_search(cursor, target);
+	      }
+        return answer;
+        }
 
     bag::size_type bag::erase(const value_type& target)
     // Library facilities used: cstdlib, node1.h
