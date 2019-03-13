@@ -83,15 +83,15 @@ namespace main_savitch_5
     bool bag::erase_one(const value_type& target)
     // Library facilities used: cstdlib, node1.h
     {
-	node *target_ptr;
+	     node *target_ptr;
 
-	target_ptr = list_search(head_ptr, target);
-	if (target_ptr == NULL)
-	    return false; // target isn't in the bag, so no work to do
-	target_ptr->set_data( head_ptr->data( ) );
-	list_head_remove(head_ptr);
-	--many_nodes;
-	return true;
+	     target_ptr = list_search(head_ptr, target);
+	     if (target_ptr == NULL)
+	     return false; // target isn't in the bag, so no work to do
+	     target_ptr->set_data( head_ptr->data( ) );
+       list_head_remove(head_ptr);
+       --many_nodes;
+       return true;
     }
 
     bag::value_type bag::grab( ) const
