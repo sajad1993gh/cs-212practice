@@ -130,25 +130,25 @@ namespace main_savitch_5
 
     void bag::operator =(const bag& source)
     // Library facilities used: node1.h
-    {
-      node *tail_ptr; // Needed for argument to list_copy
+      {
+        node *tail_ptr; // Needed for argument to list_copy
 
-      if (this == &source)
-            return;
+        if (this == &source)
+              return;
 
-      list_clear(head_ptr);
-      many_nodes = 0;
-      list_copy(source.head_ptr, head_ptr, tail_ptr);
-      many_nodes = source.many_nodes;
+        list_clear(head_ptr);
+        many_nodes = 0;
+        list_copy(source.head_ptr, head_ptr, tail_ptr);
+        many_nodes = source.many_nodes;
     }
 
     bag operator +(const bag& b1, const bag& b2)
     {
-	bag answer;
+	     bag answer;
 
-	answer += b1;
-	answer += b2;
-	return answer;
-    }
+	     answer += b1;
+	     answer += b2;
+       return answer;
+     }
 
 }
