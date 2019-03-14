@@ -4,6 +4,7 @@
 #include "node2.h"  // With value_type defined as double
 using namespace std;
 using namespace main_savitch_6B;
+using namespace main_savitch_2A;
 
 int main()
 {
@@ -18,11 +19,14 @@ name.set_data(“Jorge”);
 
 cout << name.data();
 
-//node<point> *seat;
-//seat = new node<point>;
-//(*seat).set_data(point(2,4));
+node<point> *seat;
+seat = new node<point>;
+(*seat).set_data(point(2,4));
+
+cout<< seat->get_x() <<"\n";
+cout<< seat->get_y() <<"\n";
 
 
 
-return 0;
+//return 0;
 }
