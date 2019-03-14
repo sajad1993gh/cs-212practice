@@ -13,19 +13,19 @@ int main()
 node<int>* ages = NULL;
 list_head_insert(ages,18);
 
-cout<< ages->data();
+cout<< ages->data()<<"\n";
 
-node<string> name;
-name.set_data(“Jorge”);
+//node<string> name;
+//name.set_data(“Jorge”);
 
-cout << name.data();
+//cout << name.data();
 
-node<point> *seat;
-seat = new node<point>;
-(*seat).set_data(point(2,4));
+//node<point> *seat;
+//seat = new node<point>;
+//(*seat).set_data(point(2,4));
 
-cout<< seat->get_x() <<"\n";
-cout<< seat->get_y() <<"\n";
+//cout<< seat->get_x() <<"\n";
+//cout<< seat->get_y() <<"\n";
 
 
 
