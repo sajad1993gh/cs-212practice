@@ -1,7 +1,8 @@
 
-#include <iostream>     // Provides cout and cin
+#include <iostream>   // Provides cout and cin
 #include <string>
 #include "node2.h"  // With value_type defined as double
+#include "point.h"
 using namespace std;
 using namespace main_savitch_6B;
 using namespace main_savitch_2A;
