@@ -1,6 +1,7 @@
 // FILE: queue1.h (part of the namespace main_savitch_8B)
 // TEMPLATE CLASS PROVIDED: queue<Item> (a queue of items)
 //
+//
 // TEMPLATE PARAMETER, TYPEDEFS and MEMBER CONSTANTS for the stack<Item> class:
 //   The template parameter, Item, is the data type of the items in the queue,
 //   also defined as queue<Item>::value_type. It may be any of the C++ built-in
