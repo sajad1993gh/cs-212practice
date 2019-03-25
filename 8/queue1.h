@@ -36,7 +36,7 @@
 //   Item front( ) const
 //     Precondition: size( ) > 0.
 //     Postcondition: The return value is the front item of the queue (but the queue is
-//     unchanged). 
+//     unchanged).
 //
 //   size_type size( ) const
 //     Postcondition: The return value is the total number of items in the queue.
@@ -65,8 +65,8 @@ namespace main_savitch_8B
         void push(const Item& entry);
         // CONSTANT MEMBER FUNCTIONS
         bool empty( ) const { return (count == 0); }
-        	Item front( ) const;
-        	size_type size( ) const { return count; }
+        Item front( ) const;
+        size_type size( ) const { return count; }
     private:
         Item data[CAPACITY];     // Circular array
         size_type first;         // Index of item at front of the queue
