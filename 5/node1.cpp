@@ -136,4 +136,26 @@ namespace main_savitch_5
 	   }
     }
 
+    void list_piece(const node* start_ptr, const node* end_ptr, node*& head_ptr, node*& tail_ptr)
+   {
+       head_ptr = NULL;
+       tail_ptr = NULL;
+       // Handle the case of the empty list.
+       if (start_ptr == NULL)
+       {
+            return;
+       }
+       // Make the head node for the newly created list, and put data in it.
+       list_head_insert(head_ptr, start_ptr->data( ));
+       tail_ptr = head_ptr;
+       // Copy the rest of the nodes one at a time, adding at the tail of new list.
+       start_ptr = start_ptr->link( );
+           while (start_ptr != end_ptr)
+           {
+               list_insert(tail_ptr, start_ptr->data( ));
+               tail_ptr = tail_ptr->link( );
+               start_ptr = start_ptr->link( );
+           }
+   }
+
 }
