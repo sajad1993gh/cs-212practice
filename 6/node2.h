@@ -215,7 +215,7 @@ namespace main_savitch_6B
     public:
     node_iterator(node<Item>* initial = NULL)
 	    { current = initial; }
-	     Item& operator *( ) const
+	  Item& operator *( ) const
 	    { return current->data( ); }
 	  node_iterator& operator ++( ) // Prefix ++
 	    {
