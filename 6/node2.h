@@ -62,16 +62,16 @@
 //   node* link( ) <----------------- non-const version
 //   See the note (above) about the const version and non-const versions:
 //     Postcondition: The return value is the link from this node.
-//   
+//
 //   void set_data(const Item& new_data)
 //     Postcondition: The node now contains the specified new data.
-//   
+//
 //   void set_link(node* new_link)
 //     Postcondition: The node now contains the specified new link.
 //
 // FUNCTIONS in the linked list toolkit:
 //   template <class Item>
-//   void list_clear(node<Item>*& head_ptr) 
+//   void list_clear(node<Item>*& head_ptr)
 //     Precondition: head_ptr is the head pointer of a linked list.
 //     Postcondition: All nodes of the list have been returned to the heap,
 //     and the head_ptr is now NULL.
@@ -85,21 +85,21 @@
 //     source_ptr. The original list is unaltered.
 //
 //   template <class Item>
-//   void list_head_insert(node<Item>*& head_ptr, const Item& entry) 
+//   void list_head_insert(node<Item>*& head_ptr, const Item& entry)
 //     Precondition: head_ptr is the head pointer of a linked list.
 //     Postcondition: A new node containing the given entry has been added at
 //     the head of the linked list; head_ptr now points to the head of the new,
 //     longer linked list.
 //
 //   template <class Item>
-//   void list_head_remove(node<Item>*& head_ptr) 
+//   void list_head_remove(node<Item>*& head_ptr)
 //     Precondition: head_ptr is the head pointer of a linked list, with at
 //     least one node.
 //     Postcondition: The head node has been removed and returned to the heap;
 //     head_ptr is now the head pointer of the new, shorter linked list.
 //
 //   template <class Item>
-//   void list_insert(node<Item>* previous_ptr, const Item& entry) 
+//   void list_insert(node<Item>* previous_ptr, const Item& entry)
 //     Precondition: previous_ptr points to a node in a linked list.
 //     Postcondition: A new node containing the given entry has been added
 //     after the node that previous_ptr points to.
@@ -121,7 +121,7 @@
 //     the null pointer is returned.
 //
 //   template <class Item>
-//   void list_remove(node<Item>* previous_ptr) 
+//   void list_remove(node<Item>* previous_ptr)
 //     Precondition: previous_ptr points to a node in a linked list, and this
 //     is not the tail node of the list.
 //     Postcondition: The node after previous_ptr has been removed from the
@@ -129,18 +129,18 @@
 //
 //   template <class NodePtr, class Item>
 //   NodePtr list_search
-//   (NodePtr head_ptr, const Item& target) 
+//   (NodePtr head_ptr, const Item& target)
 //   The NodePtr may be either node<Item>* or const node<Item>*
 //     Precondition: head_ptr is the head pointer of a linked list.
 //     Postcondition: The return value is a pointer that points to the first
 //     node containing the specified target in its data member. If there is no
 //     such node, the null pointer is returned.
 //
-// DYNAMIC MEMORY usage by the toolkit: 
+// DYNAMIC MEMORY usage by the toolkit:
 //   If there is insufficient dynamic memory, then the following functions throw
 //   bad_alloc: the constructor, list_head_insert, list_insert, list_copy.
 
-#ifndef MAIN_SAVITCH_NODE2_H  
+#ifndef MAIN_SAVITCH_NODE2_H
 #define MAIN_SAVITCH_NODE2_H
 #include <cstdlib>   // Provides NULL and size_t
 #include <iterator>  // Provides iterator and forward_iterator_tag
@@ -178,23 +178,23 @@ namespace main_savitch_6B
         (const node<Item>* source_ptr, node<Item>*& head_ptr, node<Item>*& tail_ptr);
 
     template <class Item>
-    void list_head_insert(node<Item>*& head_ptr, const Item& entry); 
+    void list_head_insert(node<Item>*& head_ptr, const Item& entry);
 
     template <class Item>
     void list_head_remove(node<Item>*& head_ptr);
 
     template <class Item>
     void list_insert(node<Item>* previous_ptr, const Item& entry);
- 
+
     template <class Item>
-	std::size_t list_length(const node<Item>* head_ptr);
+	  std::size_t list_length(const node<Item>* head_ptr);
 
     template <class NodePtr, class SizeType>
     NodePtr list_locate(NodePtr head_ptr, SizeType position);
 
     template <class Item>
     void list_remove(node<Item>* previous_ptr);
-   
+
     template <class NodePtr, class Item>
     NodePtr list_search(NodePtr head_ptr, const Item& target);
 
@@ -218,7 +218,7 @@ namespace main_savitch_6B
 	Item& operator *( ) const
 	    { return current->data( ); }
 	node_iterator& operator ++( ) // Prefix ++
-	    { 
+	    {
 		current = current->link( );
 		return *this;
 	    }
@@ -226,7 +226,7 @@ namespace main_savitch_6B
 	    {
 		node_iterator original(current);
 		current = current->link( );
-		return original;      	  
+		return original;
 	    }
 	bool operator ==(const node_iterator other) const
 	    { return current == other.current; }
