@@ -10,14 +10,15 @@ int main()
 {
   node<int>* ages = NULL;
   list_head_insert(ages,18);
-  cout<< ages->data()<<"\n";
+  cout<< ages->data()<<"\n"; //18
 
   node<string> name;
   name.set_data("Jorge");
-  cout << name.data()<<"\n";
+  cout << name.data()<<"\n"; //Jorge
 
   node<point> *seat;
   seat = new node<point>;
   (*seat).set_data(point(2,4));
   cout << "(" << (seat->data()).get_x() << "," << (seat->data()).get_y() << ")\n";
+  // (2,4)
 }
