@@ -10,7 +10,7 @@
 
 #include <cassert>  // Provides assert
 #include <cstdlib>  // Provides NULL, rand
-#include "node2.h"  // Provides node 
+#include "node2.h"  // Provides node
 
 namespace main_savitch_6B
 {
@@ -18,8 +18,8 @@ namespace main_savitch_6B
     bag<Item>::bag( )
     // Library facilities used: cstdlib
     {
-	head_ptr = NULL;
-	many_nodes = 0;
+	     head_ptr = NULL;
+	     many_nodes = 0;
     }
 
     template <class Item>
@@ -46,7 +46,7 @@ namespace main_savitch_6B
     {
 	size_type answer;
 	const node<Item> *cursor;
-	
+
 	answer = 0;
 	cursor = list_search(head_ptr, target);
 	while (cursor != NULL)
@@ -82,7 +82,7 @@ namespace main_savitch_6B
         }
         return answer;
     }
-    
+
     template <class Item>
     bool bag<Item>::erase_one(const Item& target)
     // Library facilities used: cstdlib, node2.h
@@ -125,16 +125,16 @@ namespace main_savitch_6B
     {
 	node<Item> *copy_head_ptr;
 	node<Item> *copy_tail_ptr;
-	
+
 	if (addend.many_nodes > 0)
 	{
 	    list_copy(addend.head_ptr, copy_head_ptr, copy_tail_ptr);
-	    copy_tail_ptr->set_link( head_ptr ); 
+	    copy_tail_ptr->set_link( head_ptr );
 	    head_ptr = copy_head_ptr;
 	    many_nodes += addend.many_nodes;
 	}
     }
-    
+
     template <class Item>
     void bag<Item>::operator =(const bag<Item>& source)
     // Library facilities used: node2.h
@@ -156,7 +156,7 @@ namespace main_savitch_6B
     {
 	bag<Item> answer;
 
-	answer += b1; 
+	answer += b1;
 	answer += b2;
 	return answer;
     }
