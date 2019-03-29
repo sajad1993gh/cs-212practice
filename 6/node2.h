@@ -213,27 +213,27 @@ namespace main_savitch_6B
     : public std::iterator<std::forward_iterator_tag, Item>
     {
     public:
-    	node_iterator(node<Item>* initial = NULL)
+    node_iterator(node<Item>* initial = NULL)
 	    { current = initial; }
-	Item& operator *( ) const
+	     Item& operator *( ) const
 	    { return current->data( ); }
-	node_iterator& operator ++( ) // Prefix ++
+	  node_iterator& operator ++( ) // Prefix ++
 	    {
-		current = current->link( );
-		return *this;
+		    current = current->link( );
+		    return *this;
 	    }
-	node_iterator operator ++(int) // Postfix ++
+	  node_iterator operator ++(int) // Postfix ++
 	    {
-		node_iterator original(current);
-		current = current->link( );
-		return original;
+		      node_iterator original(current);
+		      current = current->link( );
+		      return original;
 	    }
-	bool operator ==(const node_iterator other) const
+	  bool operator ==(const node_iterator other) const
 	    { return current == other.current; }
-	bool operator !=(const node_iterator other) const
+	  bool operator !=(const node_iterator other) const
 	    { return current != other.current; }
     private:
-	node<Item>* current;
+	       node<Item>* current;
     };
 
     template <class Item>
@@ -243,25 +243,25 @@ namespace main_savitch_6B
     public:
     	const_node_iterator(const node<Item>* initial = NULL)
 	    { current = initial; }
-	const Item& operator *( ) const
+	     const Item& operator *( ) const
 	    { return current->data( ); }
-	const_node_iterator& operator ++( ) // Prefix ++
+	     const_node_iterator& operator ++( ) // Prefix ++
 	    {
-		current = current->link( );
-		return *this;
-	    }
-	const_node_iterator operator ++(int) // Postfix ++
+		      current = current->link( );
+		       return *this;
+	     }
+	      const_node_iterator operator ++(int) // Postfix ++
 	    {
-		const_node_iterator original(current);
-		current = current->link( );
-		return original;
+		      const_node_iterator original(current);
+		      current = current->link( );
+		      return original;
 	    }
-	bool operator ==(const const_node_iterator other) const
+	     bool operator ==(const const_node_iterator other) const
 	    { return current == other.current; }
-	bool operator !=(const const_node_iterator other) const
+	     bool operator !=(const const_node_iterator other) const
 	    { return current != other.current; }
     private:
-	const node<Item>* current;
+	     const node<Item>* current;
     };
 
 }
