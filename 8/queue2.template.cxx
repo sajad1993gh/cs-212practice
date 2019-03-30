@@ -28,8 +28,8 @@ namespace main_savitch_8C
     queue<Item>::queue(const queue<Item>& source)
     // Library facilities used: node2.h
     {
-	count = source.count;
-	list_copy(source.front_ptr, front_ptr, rear_ptr);
+      count = source.count;
+      list_copy(source.front_ptr, front_ptr, rear_ptr);
     }
 
     template <class Item>
@@ -53,19 +53,19 @@ namespace main_savitch_8C
     Item queue<Item>::front( ) const
     // Library facilities used: cassert
     {
-        assert(!empty( ));    
+        assert(!empty( ));
         return front_ptr->data( );
     }
-    
+
     template <class Item>
     void queue<Item>::pop( )
     // Library facilities used: cassert, node2.h
     {
         assert(!empty( ));
-	list_head_remove(front_ptr);
-	--count;
+        list_head_remove(front_ptr);
+	      --count;
     }
-    
+
     template <class Item>
     void queue<Item>::push(const Item& entry)
     // Library facilities used: node2.h
@@ -84,4 +84,3 @@ namespace main_savitch_8C
     }
 
 }
-

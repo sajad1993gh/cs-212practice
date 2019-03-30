@@ -50,27 +50,27 @@ namespace main_savitch_8C
     class queue
     {
     public:
-        // TYPEDEFS 
+        // TYPEDEFS
         typedef std::size_t size_type;
         typedef Item value_type;
         // CONSTRUCTORS and DESTRUCTOR
         queue( );
-	queue(const queue<Item>& source);
-	~queue( );
+        queue(const queue<Item>& source);
+        ~queue( );
         // MODIFICATION MEMBER FUNCTIONS
         void pop( );
         void push(const Item& entry);
-	void operator =(const queue<Item>& source);
+        void operator =(const queue<Item>& source);
         // CONSTANT MEMBER FUNCTIONS
         bool empty( ) const { return (count == 0); }
-	Item front( ) const;
-	size_type size( ) const { return count; }
+        Item front( ) const;
+        size_type size( ) const { return count; }
     private:
         main_savitch_6B::node<Item> *front_ptr;
-        main_savitch_6B::node<Item> *rear_ptr; 
+        main_savitch_6B::node<Item> *rear_ptr;
         size_type count;       // Total number of items in the queue
     };
 }
 #include "queue2.template" // Include the implementation
-     
+
 #endif
