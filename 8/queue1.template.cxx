@@ -30,7 +30,7 @@ namespace main_savitch_8B
     // Library facilities used: cassert
     {
         assert(!empty( ));
-	return data[first];
+        return data[first];
     }
 
     template <class Item>
