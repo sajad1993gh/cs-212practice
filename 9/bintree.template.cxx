@@ -94,6 +94,6 @@ namespace main_savitch_10
             return 0;
         else
             return
-	    1 + tree_size(node_ptr->left( )) + tree_size(node_ptr->right( ));
+	      1 + tree_size(node_ptr->left( )) + tree_size(node_ptr->right( ));
     }
 }
