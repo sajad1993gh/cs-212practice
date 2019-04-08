@@ -1,5 +1,5 @@
 // FILE: bintree.template
-// IMPLEMENTS: The binary_tree node class (see bintree.h for documentation). 
+// IMPLEMENTS: The binary_tree node class (see bintree.h for documentation).
 #include <cassert>    // Provides assert
 #include <cstdlib>   // Provides NULL, std::size_t
 #include <iomanip>    // Provides std::setw
@@ -54,19 +54,19 @@ namespace main_savitch_10
             std::cout << node_ptr->data( ) << std::endl;
             print(node_ptr->left( ),  depth+1);
         }
-    }    
-	
+    }
+
     template <class Item>
     void tree_clear(binary_tree_node<Item>*& root_ptr)
     // Library facilities used: cstdlib
     {
-	if (root_ptr != NULL)
-	{
-	    tree_clear( root_ptr->left( ) );
-	    tree_clear( root_ptr->right( ) );
-	    delete root_ptr;
-	    root_ptr = NULL;
-	}
+	     if (root_ptr != NULL)
+	      {
+	         tree_clear( root_ptr->left( ) );
+	         tree_clear( root_ptr->right( ) );
+	         delete root_ptr;
+	         root_ptr = NULL;
+	       }
     }
 
     template <class Item>
@@ -93,8 +93,8 @@ namespace main_savitch_10
     {
         if (node_ptr == NULL)
             return 0;
-        else 
-            return 
+        else
+            return
 	    1 + tree_size(node_ptr->left( )) + tree_size(node_ptr->right( ));
-    }    
+    }
 }
