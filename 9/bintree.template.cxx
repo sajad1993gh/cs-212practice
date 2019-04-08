@@ -20,7 +20,7 @@ namespace main_savitch_10
     }
 
     template <class Process, class BTNode>
-    void postorder(Process f, BTNode* node_ptr) //used for clear and cooy
+    void postorder(Process f, BTNode* node_ptr) //used for clear and cooy and print
     // Library facilities used: cstdlib
     {
         if (node_ptr != NULL)
