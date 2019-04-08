@@ -82,8 +82,7 @@ namespace main_savitch_10
       {
 	       l_ptr = tree_copy( root_ptr->left( ) );
 	       r_ptr = tree_copy( root_ptr->right( ) );
-	       return
-	       new binary_tree_node<Item>( root_ptr->data( ), l_ptr, r_ptr);
+	       return new binary_tree_node<Item>( root_ptr->data( ), l_ptr, r_ptr);
        }
     }
 
