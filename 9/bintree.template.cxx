@@ -73,18 +73,18 @@ namespace main_savitch_10
     binary_tree_node<Item>* tree_copy(const binary_tree_node<Item>* root_ptr)
     // Library facilities used: cstdlib
     {
-	binary_tree_node<Item> *l_ptr;
-	binary_tree_node<Item> *r_ptr;
+      binary_tree_node<Item> *l_ptr;
+      binary_tree_node<Item> *r_ptr;
 
-	if (root_ptr == NULL)
+	    if (root_ptr == NULL)
 	    return NULL;
-	else
-	{
-	    l_ptr = tree_copy( root_ptr->left( ) );
-	    r_ptr = tree_copy( root_ptr->right( ) );
-	    return
-		new binary_tree_node<Item>( root_ptr->data( ), l_ptr, r_ptr);
-	}
+      else
+      {
+	       l_ptr = tree_copy( root_ptr->left( ) );
+	       r_ptr = tree_copy( root_ptr->right( ) );
+	       return
+	       new binary_tree_node<Item>( root_ptr->data( ), l_ptr, r_ptr);
+       }
     }
 
     template <class Item>
