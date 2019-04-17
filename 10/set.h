@@ -33,7 +33,7 @@
 //     Postcondition: Returns the number of items equal to the target
 //     (either 0 or 1 for a set).
 //
-//  bool empty( ) const 
+//  bool empty( ) const
 //     Postcondition: Returns true if the set is empty; otherwise returns false.
 //
 // VALUE SEMANTICS for the set<Item> class:
@@ -41,12 +41,12 @@
 //
 // DYNAMIC MEMORY USAGE by the set<Item> class:
 //   If there is insufficient dynamic memory, then the following functions throw
-//   bad_alloc: 
+//   bad_alloc:
 //   The constructors, insert, and the assignment operator.
 
 #ifndef MAIN_SAVITCH_SET_H
 #define MAIN_SAVITCH_SET_H
-#include <cstdlib>   // Provides size_t
+#include <cstdlib>    // Provides size_t
 
 namespace main_savitch_11
 {
