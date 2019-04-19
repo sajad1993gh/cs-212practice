@@ -18,7 +18,6 @@ void MinHeap::Add(int k)
       }
     }
 
-
 void MinHeap::Remove(int i)
   {
     keyDec(i, INT_MIN); //Decreasing the key number
