@@ -1,4 +1,4 @@
-
+// Sajad Gholamzadehrizi
 
 #include<iostream>
 using namespace std;
@@ -9,8 +9,9 @@ void search(const int a[ ], size_t size, int target, bool& found, size_t& locati
 // Postcondition: The array segment starting at a[first] and containing size elements has been // searched for the target. If the target was present, then found is true, and location is set so // that target == a[location]. Otherwise, found is set to false.
 // Library facilities used: cstdlib (provides size_t from namespace std)
   {
-     size_t first = 0;
      size_t middle;
+     size_t first;
+
      if (size == 0) found = false;
      else
      {
@@ -25,7 +26,8 @@ void search(const int a[ ], size_t size, int target, bool& found, size_t& locati
             search(a, middle-1, target, found, location);
         else
        // The target must be greater than a[middle], so search after the middle.
-            search(a, middle+1, target, found, location);
+            first = middle + 1;
+            search(a, (size-1)/2, target, found, location);
     }
   }
   int main()
