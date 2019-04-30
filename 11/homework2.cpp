@@ -33,7 +33,7 @@ void search(const int a[ ], size_t size, int target, bool& found, size_t& locati
     int A[8] = {2,3,6,7,10,12,16,18};
     bool found = false;
     size_t where = 0;
-    search(A, 8, 17, found, where);
+    search(A, 8, 16, found, where);
     cout <<  found << "\t" << where << "\n";
     return 0;
   }

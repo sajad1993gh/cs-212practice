@@ -1,11 +1,10 @@
-
+// Sajad Gholamzadehrizi
 #include <iostream>
 #include<string>
 using namespace std;
 
 void search(const int a[ ],
   size_t first, size_t last, int target, bool& found, size_t& location)
-// size --> last
 // Precondition: The array segment starting at a[first] and containing size elements is sorted // from smallest to largest.
 // Postcondition: The array segment starting at a[first] and containing size elements has been // searched for the target. If the target was present, then found is true, and location is set so // that target == a[location]. Otherwise, found is set to false.
 // Library facilities used: cstdlib (provides size_t from namespace std)
@@ -33,7 +32,11 @@ int main()
   int A[8] = {2,3,6,7,10,12,16,18};
   bool found = false;
   size_t where = 0;
-  search(A, 0, 7, 17, found, where);
+  search(A, 0, 7, 16, found, where);
   cout <<  found << "\t" << where << "\n";
   return 0;
 }
+
+// output of the test:
+//   $ ./a.out
+//   1	6
