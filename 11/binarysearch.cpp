@@ -13,7 +13,6 @@ size_t first, size_t size, int target, bool& found, size_t& location)
      if (size == 0)
      {
       found = false;
-      cout << false ;
     }
      else
      {
@@ -22,8 +21,6 @@ size_t first, size_t size, int target, bool& found, size_t& location)
           {
              location = middle;
              found = true;
-             cout << true;
-             cout << location;
            }
         else if (target < a[middle])
         // The target is less than a[middle], so search before the middle.
@@ -34,10 +31,12 @@ size_t first, size_t size, int target, bool& found, size_t& location)
     }
   }
 
-int main()
-{
+  int main()
+  {
     int A[8] = {2,3,6,7,10,12,16,18};
-    search(A, 0, 8, 17, true, 3) ;
-    cout << search(A, 0, 8, 17, true, 3) ;
+    bool found = false;
+    size_t where = 0;
+    search(A, 0, 8, 17, found, where);
+    cout <<  found << where << "\n";
     return 0;
   }

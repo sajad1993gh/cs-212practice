@@ -28,9 +28,12 @@ void search(const int a[ ], size_t size, int target, bool& found, size_t& locati
             search(a, middle+1, target, found, location);
     }
   }
-int main()
-{
-  int A[8] = {2,3,6,7,10,12,16,18};
-  cout << search(A, 8, 17, true, 0) << "\n";
-  return 0;
-}
+  int main()
+  {
+    int A[8] = {2,3,6,7,10,12,16,18};
+    bool found = false;
+    size_t where;
+    search(A, 8, 17, found, where);
+    cout <<  found << where << "\n";
+    return 0;
+  }

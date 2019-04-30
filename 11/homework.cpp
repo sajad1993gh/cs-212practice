@@ -1,5 +1,6 @@
 
 #include <iostream>
+#include<string>
 using namespace std;
 
 void search(const int a[ ],
@@ -30,6 +31,9 @@ void search(const int a[ ],
 int main()
 {
   int A[8] = {2,3,6,7,10,12,16,18};
-  cout << search(A, 0, 7, 17, true, 0) << "\n";
+  bool found = false;
+  size_t where;
+  search(A, 0, 7, 17, found, where);
+  cout <<  found << where << "\n";
   return 0;
 }
