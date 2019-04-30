@@ -1,3 +1,10 @@
+
+#include<iostream>
+using std::cin;
+using std::cout;
+using std::endl;
+#include <cstdio>
+
 void search(
 const int a[ ], size_t size, int target, bool& found, size_t& location
             )
@@ -24,3 +31,6 @@ const int a[ ], size_t size, int target, bool& found, size_t& location
             search(a, middle+1, target, found, location);
     }
   }
+
+  int A[8] = {2,3,6,7,10,12,16,18};
+  cout<< "search result:\n" << search(A, 8, 17, true, 0) <<"\n";
