@@ -23,6 +23,7 @@ size_t first, size_t size, int target, bool& found, size_t& location)
              location = middle;
              found = true;
              cout << true;
+             cout << location;
            }
         else if (target < a[middle])
         // The target is less than a[middle], so search before the middle.
