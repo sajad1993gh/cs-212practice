@@ -36,6 +36,6 @@ size_t first, size_t size, int target, bool& found, size_t& location)
 int main()
 {
     int A[8] = {2,3,6,7,10,12,16,18};
-    cout << "search result:\n" << search(A, 0, 8, 17, true, 3) <<"\n";
+    cout << search(A, 0, 8, 17, true, 3) ;
     return 0;
   }
