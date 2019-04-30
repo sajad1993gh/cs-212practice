@@ -30,13 +30,14 @@ size_t first, size_t size, int target, bool& found, size_t& location)
             search(a, first, size/2, target, found, location);
         else
        // The target must be greater than a[middle], so search after the middle.
-          search(a, middle+1, (size-1)/2, target, found, location);
+            search(a, middle+1, (size-1)/2, target, found, location);
     }
   }
 
 int main()
 {
     int A[8] = {2,3,6,7,10,12,16,18};
+    search(A, 0, 8, 17, true, 3) ;
     cout << search(A, 0, 8, 17, true, 3) ;
     return 0;
   }
