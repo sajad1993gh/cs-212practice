@@ -34,6 +34,6 @@ int main()
   bool found = false;
   size_t where = 0;
   search(A, 0, 7, 17, found, where);
-  cout <<  found << where << "\n";
+  cout <<  found << "\t" << where << "\n";
   return 0;
 }
