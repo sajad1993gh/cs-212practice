@@ -10,15 +10,17 @@ size_t first, size_t size, int target, bool& found, size_t& location
      if (size == 0) found = false;
      else
      {
-       middle = first + size/2; if (target == a[middle]) {
+       middle = first + size/2;
+        if (target == a[middle])
+          {
              location = middle;
              found = true;
-      }
-      else if (target < a[middle])
-      // The target is less than a[middle], so search before the middle.
-        search(a, first, size/2, target, found, location);
-      else
-      // The target must be greater than a[middle], so search after the middle.
-      search(a, middle+1, (size-1)/2, target, found, location);
+           }
+        else if (target < a[middle])
+        // The target is less than a[middle], so search before the middle.
+            search(a, first, size/2, target, found, location);
+        else
+       // The target must be greater than a[middle], so search after the middle.
+          search(a, middle+1, (size-1)/2, target, found, location);
     }
   }
