@@ -1,5 +1,6 @@
 // Sajad Gholamzadehrizi
 #include <iostream>
+#include <cassert>
 #include<string>
 using namespace std;
 
@@ -9,6 +10,7 @@ void search(const int a[ ],
 // Postcondition: The array segment starting at a[first] and containing size elements has been // searched for the target. If the target was present, then found is true, and location is set so // that target == a[location]. Otherwise, found is set to false.
 // Library facilities used: cstdlib (provides size_t from namespace std)
   {
+     assert(first <= last);
      size_t middle;
      if (last == 0) found = false;
      else
