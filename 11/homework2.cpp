@@ -3,7 +3,7 @@
 #include<iostream>
 using namespace std;
 
-//
+// have to work on it later
 void search(const int a[ ], size_t size, int target, bool& found, size_t& location)
 // Precondition: The array segment starting at a[first] and containing size elements is sorted // from smallest to largest.
 // Postcondition: The array segment starting at a[first] and containing size elements has been // searched for the target. If the target was present, then found is true, and location is set so // that target == a[location]. Otherwise, found is set to false.
