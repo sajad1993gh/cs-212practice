@@ -28,13 +28,17 @@ void push(const Item& entry)
 Item& pop()
 {
   if(used == 1)
-  used--;
+  {
+    return data[0];
+    used--;
+  }
   else
   {
+    Item removed = data[0];
     data[0] = data[used--];
     used--;
     size_t i = 0;
-    while(i != used && data[i] < data[l_child(i)] && data[i] < data[r_child(i)])
+    while(i != used && (data[i] < data[l_child(i)] || data[i] < data[r_child(i)]) )
     {
       if(data[i] < data[l_child(i)])
       {
@@ -47,5 +51,6 @@ Item& pop()
         i = 2*i + 2;
       }
     }
+    return removed;
   }
 }
