@@ -24,7 +24,7 @@ void search(const int a[ ],size_t first, size_t last, int target, bool& found, s
             search(a, first, last/2, target, found, location);
         else
        // The target must be greater than a[middle], so search after the middle.
-            search(a, middle+1, last/2, target, found, location);
+            search(a, middle+1, last, target, found, location); // edited last/2 to last
     }
   }
 int main()
