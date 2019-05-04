@@ -32,10 +32,10 @@ int main()
   int A[8] = {2,3,6,7,10,12,16,18};
   bool found = false;
   size_t where = 0;
-  search(A, 0, 7, 16, found, where);
+  search(A, 0, 7, 18, found, where);
   cout <<  found << "\t" << where << "\n";
   return 0;
 }
 // output of the test:
 //   $ ./a.out
-//   1	6
+//   1	7
