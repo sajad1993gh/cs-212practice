@@ -27,7 +27,7 @@ void push(const Item& entry)
 
 Item& pop()
 {
-  if(used == 1)
+  if(used == 1) // this part might be excessive (not needed)
   {
     return data[0];
     used--;
