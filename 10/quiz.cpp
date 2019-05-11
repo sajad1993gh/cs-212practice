@@ -38,15 +38,17 @@ Item& pop()
     data[0] = data[used--];
     used--;
     size_t i = 0;
-    while(i != used && (data[i] < data[l_child(i)] || data[i] < data[r_child(i)]) )
+    while(i != used && data[i] < data[r_child(i)]) )
     {
       if(data[i] < data[l_child(i)])
       {
+        removed = data[i];
         swap(data[i] , data[l_child(i)]);
         i = 2*i + 1;
       }
       else
       {
+        removed = data[i];
         swap(data[i] , data[r_child(i)]);
         i = 2*i + 2;
       }
