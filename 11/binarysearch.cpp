@@ -36,7 +36,7 @@ size_t first, size_t size, int target, bool& found, size_t& location)
     int A[8] = {2,3,6,7,10,12,16,18};
     bool found = false;
     size_t where = 0;
-    search(A, 0, 8, 16, found, where);
+    search(A, 0, 8, 17, found, where);
     cout <<  found << "\t" << where << "\n";
     return 0;
   }
