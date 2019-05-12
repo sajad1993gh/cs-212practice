@@ -10,12 +10,11 @@ void search(int a[ ], size_t size, int target, bool& found, size_t& location)
 // Library facilities used: cstdlib (provides size_t from namespace std)
   {
      size_t middle;
-     size_t first;
 
      if (size == 0) found = false;
      else
      {
-       middle =  first + size/2;
+       middle =  size/2;
         if (target == a[middle])
           {
              location = middle;
@@ -24,14 +23,12 @@ void search(int a[ ], size_t size, int target, bool& found, size_t& location)
         else if (target < a[middle])
         // The target is less than a[middle], so search before the middle.
         {
-          size_t first = 0;
           search(a, size/2, target, found, location);
         }
         else
        // The target must be greater than a[middle], so search after the middle.
        {
-         first = middle + 1;
-         search(a, (size-1)/2, target, found, location);
+         search(a + middle + 1, (size-1)/2, target, found, location);
        }
     }
   }
