@@ -59,9 +59,9 @@ namespace heap_zhu
 		while (!done && (lchild = left_child(k)) < used ) // child of k exists
 		{
 			larger_child = lchild;
-                        rchild = right_child(k);
+      rchild = right_child(k);
 
-                        // right child exists and larger
+      // right child exists and larger
 			if ( (rchild < used) && (data[lchild] < data[rchild]) )
 				larger_child = rchild;
 
