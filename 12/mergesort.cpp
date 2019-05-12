@@ -10,6 +10,7 @@ cout << endl;
 return EXIT_SUCCESS;
 }
 
+
 void mergesort(int data[ ], size_t n)
 // Precondition: data is an array with at least n components.
 // Postcondition: The elements of data have been rearranged so
