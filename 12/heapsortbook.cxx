@@ -73,6 +73,22 @@ int main( )
 
     return EXIT_SUCCESS;
 }
+size_t parent(size_t k)
+// Library facilities used: cstdlib
+{
+    return (k-1)/2;
+}
+size_t left_child(size_t k)
+// Library facilities used: cstdlib
+{
+    return 2*k + 1;
+}
+size_t right_child(size_t k)
+// Library facilities used: cstdlib
+{
+    return 2*k + 2;
+}
+
 
 void heapsort(int data[ ], size_t n)
 // Library facilities used: algorithm, cstdlib
@@ -91,27 +107,9 @@ void heapsort(int data[ ], size_t n)
     }
 }
 
-size_t parent(size_t k)
-// Library facilities used: cstdlib
-{
-    return (k-1)/2;
-}
-
-size_t left_child(size_t k)
-// Library facilities used: cstdlib
-{
-    return 2*k + 1;
-}
-
-size_t right_child(size_t k)
-// Library facilities used: cstdlib
-{
-    return 2*k + 2;
-}
-
 void make_heap(int data[ ], size_t n)
 // Library facilities used: itemtool.h (from page 277), cstdlib
-// 
+//
 {
     size_t i;  // Index of next element to be added to heap
     size_t k;  // Index of new element as it is being pushed upward through the heap
@@ -163,4 +161,3 @@ void reheapify_down(int data[ ], size_t n)
             heap_ok = true;
     }
 }
-
