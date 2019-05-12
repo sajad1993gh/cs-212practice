@@ -93,10 +93,9 @@ namespace heap_zhu
   }
 
   template <class Item>
-  Item& heap<Item>::operator[](const heap<Item>::size_type index) 
+  Item& heap<Item>::operator[](const heap<Item>::size_type index)
   {
         assert(index < sorted);
         return data[index];
   }
 }
-
